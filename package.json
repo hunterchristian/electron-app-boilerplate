@@ -1,0 +1,30 @@
+{
+  "name": "electron-webpack-quick-start",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "lint": "tslint 'src/**/*.js?(x)' 'src/**/*.ts?(x)' -e '**/vendor/**/*.js?(x)' -e '**/vendor/**/*.ts?(x)'",
+    "lint:fixup": "tslint 'src/**/*.js?(x)' 'src/**/*.ts?(x)' --fix -e '**/vendor/**/*.js?(x)' -e '**/vendor/**/*.ts?(x)'"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.4"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "electron": "1.8.4",
+    "electron-builder": "^20.8.1",
+    "electron-webpack": "^2.0.1",
+    "electron-webpack-ts": "^2.0.0",
+    "tslint": "^5.9.1",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.8.1",
+    "webpack": "^4.4.1"
+  },
+  "resolutions": {
+    "webpack-sources": "1.0.1"
+  }
+}
